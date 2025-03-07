@@ -1,0 +1,356 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #018790;
+    display: flex; /* Añadido para el footer sticky */
+    flex-direction: column; /* Añadido para el footer sticky */
+    min-height: 100vh; /* Añadido para el footer sticky */
+}
+
+header {
+    background-color: #7dad93;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    color: #3366cc; /* Color para el título principal */
+}
+
+nav a, footer a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio entre el párrafo y el botón */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.desktop-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.desktop-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.menu-button {
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.mobile-nav {
+    display: none;
+    width: 100%;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav ul li {
+    padding: 10px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 247, 0); /* Cambia el color del texto según tu preferencia */
+    text-align: center;
+    max-width: 80%; /* Limita el ancho del contenido */
+    padding: 20px; /* Agrega relleno para evitar que el texto toque los bordes */
+    box-sizing: border-box; /* Incluye el relleno en el ancho total */
+}
+
+.hero-content h2 {
+    font-size: 2.5em; /* Ajusta el tamaño del título */
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em; /* Ajusta el tamaño del párrafo */
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 90%; /* Aumenta el ancho en móviles */
+        padding: 10px; /* Reduce el relleno en móviles */
+    }
+
+    .hero-content h2 {
+        font-size: 1.8em; /* Reduce el tamaño del título en móviles */
+    }
+
+    .hero-content p {
+        font-size: 1em; /* Reduce el tamaño del párrafo en móviles */
+    }
+}
+
+.content {
+    padding: 20px;
+}
+
+#acerca h2 {
+    color: #4CAF50; /* Color para "Acerca de la empresa" */
+}
+
+#acerca{
+    background-color: #bacca4;
+}
+
+#sillas h2 {
+    color: #FF9800; /* Color para "Tipos de sillas" */
+}
+
+#sillas{
+    background-color: #018790;
+}
+
+#servicios h2 {
+    color: #9C27B0; /* Color para "Servicios" */
+}
+
+#servicios{
+    background-color: #bacca4;
+}
+
+#contacto h2 {
+    color: #E91E63; /* Color para "Contacto" */
+}
+
+#contacto{
+    background-color: #0a516d;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px; /* Limita el ancho máximo del carrusel */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.carousel-slide {
+    position: relative; /* Añadido para posicionar el caption */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    padding: 2px;
+    text-align: center;
+}
+
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-slide {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .carousel {
+        max-width: 100%; /* El carrusel ocupa todo el ancho en móviles */
+    }
+
+    .carousel-slide img {
+        height: auto;
+    }
+}
+
+footer {
+    background-color: #2b2726;
+    padding: 5px;
+    text-align: center;
+    margin-top: auto;
+    color: #777; /* Color para el texto del footer */
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5em; /* Ajusta el tamaño de los iconos */
+    color:  #777; /* Color de los iconos */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Color de los iconos al pasar el mouse */
+}
+
+/* Media Queries para Responsividad */
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav.show {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+/*CATALOGO*/
+.content-catalogo h2{
+    text-align: center;
+}
+/* ... estilos existentes ... */
+
+.catalogo {
+    text-align: left;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.add-to-cart, .checkout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover, .checkout-button:hover {
+    background-color: #0056b3;
+}
+
+.cart {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.remove-item {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
